@@ -16,7 +16,7 @@
         <!-- Custom styles for this template -->
         <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/bg-2.jpg);" >
+  <body onload="services_3();" style="background-image: url(assets/img/bg-2.jpg);" >
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -37,20 +37,20 @@
     <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <img src="assets/img/service-5.jpg" class="img-fluid img-thumbnail card-img-top">
+            <img id="serv-5-img" class="img-fluid img-thumbnail card-img-top">
             <div class="card-body">
-              <h5 class="card-title text-primary">Complete Home Tiling</h5>
-              <p class="card-text text-dark">If you are building a new home or renovating your current home, with us, you are in good hands for all your tiling needs.We offer  affordable tile sale and installation services.</p>
+              <h5 id="serv-5" class="card-title text-primary"></h5>
+              <p id="serv-5-info"  class="card-text text-dark"></p>
               <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <img src="assets/img/service-6.jpg" class="img-fluid img-thumbnail card-img-top">
+                <img id="serv-6-img" class="img-fluid img-thumbnail card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title text-primary">Commercial Tiling</h5>
-                    <p class="card-text text-dark">From small offices to large offices, our tiling experts can help you make an impact on your customers. Our tiling experts can help you bring all of your design ideas to life.</p>
+                    <h5 id="serv-6" class="card-title text-primary"></h5>
+                    <p id="serv-6-info" class="card-text text-dark"></p>
                     <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
                 </div>
             </div>
@@ -70,9 +70,10 @@
   </nav>
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>

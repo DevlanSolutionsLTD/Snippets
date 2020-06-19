@@ -33,7 +33,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/background.jpg);"  class="text-center">
+  <body onload="indexPage();" style="background-image: url(assets/img/background.jpg);"  class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -51,10 +51,9 @@
   </header>
   
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">TilesSales N` Installation </h1>
-    <p class="lead">A professional team that gets the work done</p>
-    <p class="lead">TilesSales N` Installation Inc. is a group of skilled tile sellers and installers who bring your décor visions to life. Whether you need a tiling solution for your kitchens, baths, living areas, fireplaces, or patios, we have you covered!
-    </p>
+    <h1 id="heading" class="cover-heading"></h1>
+    <p  id ="tagline-1" class="lead"></p>
+    <p id ="tagline-2" class="lead"></p>
     <p class="lead">
       <a href="contact.html" class="btn btn-lg btn-outline-primary">Talk To Us</a>
     </p>
@@ -62,9 +61,10 @@
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>
