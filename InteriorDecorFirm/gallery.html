@@ -16,7 +16,7 @@
         <!-- Custom styles for this template -->
         <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/bg-2.jpg);" >
+  <body onload="gallery();" style="background-image: url(assets/img/bg-2.jpg);" >
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -37,12 +37,12 @@
     <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <img src="assets/img/service-1.jpg" class="img-fluid img-thumbnail card-img-top">
+            <img id="gallery-1"  class="img-fluid img-thumbnail card-img-top">
           </div>
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <img src="assets/img/service-2.jpg" class="img-fluid img-thumbnail card-img-top">
+                <img id="gallery-2"  class="img-fluid img-thumbnail card-img-top">
             </div>
         </div>
     </div>
@@ -50,12 +50,12 @@
     <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <img src="assets/img/service-3.jpg" class="img-fluid img-thumbnail card-img-top">
+            <img id="gallery-3" class="img-fluid img-thumbnail card-img-top">
           </div>
         </div>
         <div class="col-sm-6">
             <div class="card">
-                <img src="assets/img/service-4.jpg" class="img-fluid img-thumbnail card-img-top">
+                <img id="gallery-4" class="img-fluid img-thumbnail card-img-top">
             </div>
         </div>
     </div>
@@ -75,9 +75,10 @@
   </nav>
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>

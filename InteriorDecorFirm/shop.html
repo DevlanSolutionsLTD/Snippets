@@ -16,7 +16,7 @@
         <!-- Custom styles for this template -->
         <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/bg-2.jpg);" >
+  <body onload="tilesShop();" style="background-image: url(assets/img/bg-2.jpg);" >
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -34,24 +34,25 @@
   <hr>
   <main>
     <h1 class="text-primary">Our Tiles Shop</h1>
-    <p class="text-primary"><i>Our Tiles Categories and types</i></p>
+    <p id="p1" class="text-primary"><i></i></p>
     <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <img src="assets/img/shop-1.webp" class="img-fluid img-thumbnail card-img-top">
+            <img id="shop-1-img" src="" class="img-fluid img-thumbnail card-img-top">
             <div class="card-body">
-              <h5 class="card-title text-primary">Slim Ayton Grey Glazed Porcelain Floor Tile <br> 600 x 600mm </h5>
-              <p class="card-text text-dark">Porcelain Floor Tile KES 1,720 / m2 </p>
+              <h5 id="shop-1" class="card-title text-primary"></h5>
+              <p id="shop-1-info" class="card-text text-dark"></p>
               <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
             <div class="card">
-                <img src="assets/img/shop-2.webp" class="img-fluid img-thumbnail card-img-top">
+                <img id="shop-2-img" class="img-fluid img-thumbnail card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title text-primary">Fast Avorio Glazed Porcelain Floor Tile  300 x 600mm </h5>
-                    <p class="card-text text-dark">Glazed Porcelain Tile  KES 1,599 / m2 </p> 
+                    <h5 id="shop-2" class="card-title text-primary"></h5>
+                    <p id="shop-2-info" class="card-text text-dark"></p> 
                     <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
                 </div>
             </div>
@@ -74,9 +75,10 @@
   </nav>
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id ="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>

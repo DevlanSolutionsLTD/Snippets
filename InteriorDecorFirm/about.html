@@ -15,7 +15,7 @@
         <!-- Custom styles for this template -->
         <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/bg-1.jpg);">
+  <body onload="aboutusPage();" style="background-image: url(assets/img/bg-1.jpg);">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -36,12 +36,12 @@
       <div class="row col-md-12">
         <div class="card col-md-12">
             <div class="card-body">
-                <h6 class="text-primary">Tiling Craftsman At Your Service</h6>
-                <h6 class="text-dark">We install tiles that inspire for various residential and commercial spaces. Through a combination of artistic design and clean and precise installation techniques, TilesSales N' Installation Inc. provides you with excellence in every tile project, be it big or small.</h6>
-                <h6 class="text-primary">Laying Tile Surfaces With Perfection Since 2020</h6>
-                <h6 class="text-dark">As tiling contractors we are dedicated to bringing superior craftsmanship to each of our tile projects. Our team of experienced and qualified tilers are trained to do the job right the first time. Whatever tiling trends inspire you, our experts can incorporate these trends into your tile project.</h6>
-                <h6 class="text-primary">Defined By Innovation, Driven By Customer Satisfaction</h6>
-                <h6 class="text-dark">Whether it's a renovation, a new construction or a commercial project, TilesSales N` Installation Inc. will take care of all your tiling projects. We specialize in the installation of various types of surfaces: ceramic, porcelain, glass, marble, granite, slate or natural stone. We are committed to providing tile installation services that meet all your tile needs!</h6>
+                <h6 id="about1" class="text-primary"></h6>
+                <h6 id="about1.1" class="text-dark"></h6>
+                <h6 id="about2" class="text-primary"></h6>
+                <h6 id="about2.2" class="text-dark"></h6>
+                <h6 id="about3" class="text-primary"></h6>
+                <h6 id="about3.3" class="text-dark"></h6>
             </div>
           </div>
       </div>
@@ -50,9 +50,10 @@
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>

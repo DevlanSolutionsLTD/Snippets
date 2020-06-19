@@ -16,7 +16,7 @@
         <!-- Custom styles for this template -->
         <link href="assets/css/tilesn`installation.css" rel="stylesheet">
   </head>
-  <body style="background-image: url(assets/img/bg-2.jpg);" >
+  <body onload="services_2()" style="background-image: url(assets/img/bg-2.jpg);" >
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -37,20 +37,21 @@
     <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <img src="assets/img/service-4.jpg" class="img-fluid img-thumbnail card-img-top">
+            <img id="serv-3-img"  class="img-fluid img-thumbnail card-img-top">
             <div class="card-body">
-              <h5 class="card-title text-primary">Countertop Installation</h5>
-              <p class="card-text text-dark">From kitchen backsplash to counter-tops, our tile experts can refresh your kitchen’s look in the most interesting ways. We install durable, easy to maintain, elegant kitchen counters.</p>
+              <h5 id="serv-3" class="card-title text-primary"></h5>
+              <p id="serv-3-info" class="card-text text-dark"></p>
               <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
             </div>
           </div>
         </div>
+
         <div class="col-sm-6">
             <div class="card">
-                <img src="assets/img/service-3.jpg" class="img-fluid img-thumbnail card-img-top">
+                <img id="serv-4-img" class="img-fluid img-thumbnail card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title text-primary">Fireplace Tiling</h5>
-                    <p class="card-text text-dark">From traditional masonry to modern marble tiles, you have unlimited options to customize your fireplace in a way that reflects your lifestyle. Be it an outdoor fireplace or indoor we will make sure to satisfy your taste.
+                    <h5 id="serv-4" class="card-title text-primary"></h5>
+                    <p id="serv-4-info" class="card-text text-dark"></p>
                     <a href="contact.html" class="btn btn-primary">Request An Estimate</a>
                 </div>
             </div>
@@ -73,9 +74,10 @@
   </nav>
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>TilesSales N` Installation.  Powered By <a href="https://martdev.info/">MartDevelopers Inc X Devlan Technologies</a></p>
+      <p id="footerInfo"></p>
     </div>
   </footer>
 </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>
