@@ -28,7 +28,7 @@
     </style>
     <link href="css/billboard-firm.css" rel="stylesheet">
   </head>
-  <body onload="index();">
+  <body onload="contact();">
     <header>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
@@ -56,14 +56,9 @@
   </header>
 
 <main role="main">
-
   <section class="bg jumbotron text-center">
     <div class=" container">
-      <h1 id="app_name_1" class="text-light"></h1>
-      <p id="app_desc" class="text-light"><p>
-        <a id="app_products" href="services.html" class="btn btn-primary my-2"></a>
-        <a id ="app_contact" href="contact.html" class="btn btn-primary my-2"></a>
-      </p>
+      <h1 id="app_contact" class="text-light"></h1>
     </div>
   </section>
 
@@ -71,59 +66,56 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-1" class="bd-placeholder-img card-img-top" width="100%" height="225" >
-            <div class="card-body">
-              <p id="app_index-1-info" class="card-text"></p>
-            </div>
+        <div class="col-md-6">
+          <div class="card mb-6 shadow-sm">
+            <img id="app_gallery-1" class="bd-placeholder-img card-img-top" width="100%" height="225" >
+          </div>
+          <div class="card-body">
+            <p id="app_contact_phone" class="card-text"></p>
+            <p id="app_contact_phone1" class="card-text"></p>
+            <p id="app_contact_email" class="card-text"></p>
+            <p id="app_contact_hq" class="card-text"></p>
+            <p id="app_contact_url" class="card-text"></p>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-2" class="bd-placeholder-img card-img-top" width="100%" height="225" >
+        <div class="col-md-6">
+          <div class="card mb-6 shadow-sm">
             <div class="card-body">
-              <p id="app_index-2-info" class="card-text"></p>
+                <form>
+                    <h1></h1>
+                    <div class="form-row text-dark">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4">Full Name</label>
+                            <input type="text" required class="form-control" name="fullname" id="fullname">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputPassword4">Phone</label>
+                            <input type="text" required class="form-control" name="phone"  id="phone">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputPassword4">Email</label>
+                            <input type="email" required class="form-control" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" required class="form-control" id="address" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Title</label>
+                        <input type="text" required class="form-control" name="title id="title">
+                    </div>  
+                    <div class="form-group">
+                        <label for="inputAddress">Messange</label>
+                        <textarea type="text" required rows="3" name="messange" class="form-control" id="messange"></textarea>
+                    </div>                    
+                    <button type="submit" onclick="sendMessange();"  class="btn btn-primary">Submit</button>
+                    <h1></h1>
+                </form>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-3" class="bd-placeholder-img card-img-top" width="100%" height="225" >
-            <div class="card-body">
-              <p id="app_index-3-info" class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-4" class="bd-placeholder-img card-img-top" width="100%" height="225" >
-            <div class="card-body">
-              <p id="app_index-4-info" class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-5" class="bd-placeholder-img card-img-top" width="100%" height="225" >
-            <div class="card-body">
-              <p id="app_index-5-info" class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img id="app_index-6" class="bd-placeholder-img card-img-top" width="100%" height="225" >
-            <div class="card-body">
-              <p id="app_index-6-info" class="card-text"></p>
-            </div>
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
