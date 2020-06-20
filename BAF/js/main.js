@@ -41,16 +41,23 @@ function services()
     document.getElementById("app_services").innerHTML= "BillBoard Adverts Inc. <br> Our Products"
     document.getElementById("app_services-1").src = "img/billboard.jpg";
     document.getElementById("app_services-1-info").innerHTML = "Billboard Advertising ";
+    document.getElementById("app_services-1-info-details").innerHTML = 
+    "HIGHLY VISUAL, BRAND BUILDING & COST EFFECTIVE OUTDOOR MEDIA <br> Tried and tested, billboards located at high traffic convergence points,are the ideal medium to get your brand noticed and established. Billboards are ideal for new product launches and as a long-term brand building strategy - they deliver high reach, and create impact for your ad campaigns.";
     document.getElementById("app_services-2").src = "img/spectular.jpg";
     document.getElementById("app_services-2-info").innerHTML = "Spectacular Billboards";
+    document.getElementById("app_services-2-info-details").innerHTML ="Billboard Adverts Inc has a vast array of innovative airport advertising options available within the international and domestic airport terminal buildings, as well as outside the airport, both airside and landside."
     document.getElementById("app_services-3").src = "img/airport.jpg";
     document.getElementById("app_services-3-info").innerHTML = "Airport Advertising  ";
+    document.getElementById("app_services-3-info-details").innerHTML = "Showcase your brand in African airports to high-end business and leisure travellers. Airport advertising provides an ideal platform to target influential decision makers with little media wastage.";
     document.getElementById("app_services-4").src = "img/outdoor.jpg";
     document.getElementById("app_services-4-info").innerHTML = "Landmark Outdoor";
+    document.getElementById("app_services-4-info-desc").innerHTML ="Billboard Advert’s rare and unique Landmark Out Of Home (OOH) sites provide the ultimate outdoor branding platform. As the market leader across the African continent, Billboard Adverts Inc, has secured the best landmark advertising opportunities in each of the countries in which we operate."
     document.getElementById("app_services-5").src = "img/functure.jpg";
     document.getElementById("app_services-5-info").innerHTML = "Street Furniture ";
+    document.getElementById("app_services-5-info-desc").innerHTML ="Street Furniture Advertising provides the ideal opportunity to drive your brand into the minds of all commuters, pedestrians and motorists. Located throughout city centres, suburbs and rural areas, Street Furniture Advertising delivers point-of-sale and top of mind awareness. An added bonus is the positive contribution this medium provides to the community."
     document.getElementById("app_services-6").src = "img/mall.jpg";
     document.getElementById("app_services-6-info").innerHTML = "Mall Media";
+    document.getElementById("app_services-6-info-desc").innerHTML ="Mall media talks directly to the consumer with limited media wastage. It creates a dominating and influential presence targeting commuters and shopping decision makers alike."
 }
 
 function about()
