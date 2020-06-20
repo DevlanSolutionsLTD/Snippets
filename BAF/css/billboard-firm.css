@@ -42,3 +42,13 @@ footer p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.about
+{
+  background-image: url("../img/1.jpg");
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
