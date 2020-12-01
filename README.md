@@ -1,2 +1,2 @@
-# BoilerPlates
-This repo  holds bootstrap boilerplates and demos to help you kick start your bootstrap landing pages and your front end projects ASAP.
+# Devlan Snippets
+This repo  holds bootstrap boilerplates, demos, templates, code snippets to help you kick start any projects ASAP.
