@@ -143,8 +143,35 @@ def dashboard():
 
 
 #Make Order
+@app.route('/make_order', methods=['GET', 'POST'])
+@is_logged_in
+def add_question():
+    form = ArticleForm(request.form)
+    if request.method == 'POST' and form.validate():
+        oder_food = form.name.data
+        qty = form.age.data
+        price = form.phone.data
+        status = form.symptoms.data
+
+        # Create Cursor
+        cur = mysql.connection.cursor()
+
+        # Execute
+        cur.execute("INSERT INTO customer_orders(order_food, qty, price, status) VALUES(%s, %s, %s, %s)", (order_food, qty, price, status)
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        #Close connection
+        cur.close()
+
+        flash('Customer Order Submitted', 'success')
+
+        return redirect(url_for('dashboard'))
+
+    return render_template('maker_order.html', form=form)
+    
 #Order Form
-# Questionaire form
 class ArticleForm(Form):
     oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
     qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
