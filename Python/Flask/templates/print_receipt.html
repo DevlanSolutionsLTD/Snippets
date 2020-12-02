@@ -3,10 +3,33 @@
 {% block body %}
 <div class="container">
     <div class="jumbotron text-center">
-        <h1 class="display-4 text-center">Python Flask Resturant Ordering System </h1>
-        <p class="lead ">PFRS - The Craddle Of Hospitality</p>
+        <h3 class="display-4 text-center">Resturant Ordering System </h1>
+        <p class="lead ">Payment Receipt</p>
         <hr class="my-4">
-        <!--<a class="btn btn-primary btn-lg" href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank" role="button">Learn more</a>-->
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Food Ordered</th>
+                <th scope="col">Food Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Payment Status</th>
+                <th scope="col">Order Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{printReceipt.id }}</th>
+                <th scope="col">{{printReceipt.customer_name}}</th>
+                <td>{{printReceipt.order_food }}</td>
+                <td>{{printReceipt.qty }}</td>
+                <td>{{printReceipt.price }}</td>
+                <td>{{printReceipt.status }}</td>
+                <td>{{printReceipt.created_at }}</td>
+              </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
