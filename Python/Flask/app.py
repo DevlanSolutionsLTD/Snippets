@@ -129,24 +129,6 @@ def logout():
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
-# Dashboard
-@app.route('/dashboard')
-@is_logged_in
-def dashboard():
-    # Create cursor
-    cur = mysql.connection.cursor()
-
-    # Get Orders In Dashboard
-    # 
-    result = cur.execute("SELECT * FROM customer_orders ")
-    Responses = cur.fetchall()
-    if result > 0:
-        return render_template('dashboard.html', Responses=Responses)      
-    else:
-        msg = 'No Recent Orders Found'
-        return render_template('dashboard.html', msg=msg)
-    # Close connection
-    cur.close()
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
