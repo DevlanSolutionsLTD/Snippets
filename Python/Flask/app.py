@@ -141,6 +141,19 @@ def dashboard():
     # Close connection
     cur.close()
 
+
+#Make Order
+#Order Form
+# Questionaire form
+class ArticleForm(Form):
+    oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
+    qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
+    price = StringField('Food Price',[validators.length(min=1,max=15)])
+    status = StringField('Order Payment Status',[validators.length(min=1,max=15)])
+#Pay Order
+
+#Print Receipt
+
 if __name__ == '__main__':
     app.secret_key = 'secret123'
     app.run(debug=True)
