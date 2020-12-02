@@ -19,14 +19,16 @@
           </tr>
         </thead>
         <tbody>
+          {% for customerOrders in customerOrders %}
           <tr>
-            <th scope="row"></th>
+            <th scope="row">{{customerOrders.id }}</th>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
+          {% endfor %}
         </tbody>
       </table>
   </div>

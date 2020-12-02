@@ -141,6 +141,24 @@ def dashboard():
     # Close connection
     cur.close()
 
+#Get All Customer Orders
+def customerOrders():
+    # Create cursor
+    cur = mysql.connection.cursor()
+
+    # Get Filled Questionaires
+    result = cur.execute("SELECT * FROM customer_orders ORDER BY created_at ASC")
+
+    customerOrders = cur.fetchall()
+
+    if result > 0:
+        return render_template('home.html', customerOrders=customerOrders)
+    else:
+        msg = 'No Available Customer Orders Available'
+        return render_template('home.html', msg=msg)
+    # Close connection
+    cur.close()
+
 
 #Make Order
 @app.route('/make_order', methods=['GET', 'POST'])
@@ -170,7 +188,7 @@ def add_question():
         return redirect(url_for('dashboard'))
 
     return render_template('maker_order.html', form=form)
-    
+
 #Order Form
 class ArticleForm(Form):
     oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
