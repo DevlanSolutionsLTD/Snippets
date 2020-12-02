@@ -200,7 +200,19 @@ def add_Customer_Order():
 
 #Pay Order
 
+
 #Print Receipt
+@app.route('/contact_tracings/<string:id>/')
+def contact_tracing(id):
+    # Create cursor
+    cur = mysql.connection.cursor()
+
+    # Get Question
+    result = cur.execute("SELECT * FROM questionaires WHERE id = %s", [id])
+
+    contact_tracing = cur.fetchone()
+
+    return render_template('response.html', contact_tracing=contact_tracing)
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
