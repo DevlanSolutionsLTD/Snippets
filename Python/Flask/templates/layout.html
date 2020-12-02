@@ -30,5 +30,15 @@
     <!--Data Table -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!--Print Receipt Script-->
+    <script>
+      function printContent(el){
+      var restorepage = $('body').html();
+      var printcontent = $('#' + el).clone();
+      $('body').empty().html(printcontent);
+      window.print();
+      $('body').html(restorepage);
+      }
+      </script>
   </body>
 </html>

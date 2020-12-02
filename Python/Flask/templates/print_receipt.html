@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="container">
-    <div class="jumbotron text-center">
+    <div id="Receipt" class="jumbotron text-center">
         <h3 class="display-4 text-center">Resturant Ordering System </h1>
         <p class="lead ">Payment Receipt</p>
         <hr class="my-4">
@@ -30,6 +30,11 @@
               </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <button id="print" class="btn btn-outline-success" onclick="printContent('Receipt');">
+            Print Receipt
+        </button>
     </div>
 </div>
 {% endblock %}
