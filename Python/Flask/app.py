@@ -165,17 +165,17 @@ class OrderForm(Form):
     qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
     price = StringField('Food Price',[validators.length(min=1,max=15)])
     status = StringField('Order Payment Status',[validators.length(min=1,max=15)])
-    
+
 #Make Order
 @app.route('/make_order', methods=['GET', 'POST'])
 @is_logged_in
 def add_Customer_Order():
     form = OrderForm(request.form)
     if request.method == 'POST' and form.validate():
-        oder_food = form.name.data
-        qty = form.age.data
-        price = form.phone.data
-        status = form.symptoms.data
+        oder_food = form.oder_food.data
+        qty = form.qty.data
+        price = form.price.data
+        status = form.status.data
 
         # Create Cursor
         cur = mysql.connection.cursor()
