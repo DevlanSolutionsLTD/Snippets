@@ -161,7 +161,7 @@ def customerOrders():
 
 #Order Form Helper Class
 class OrderForm(Form):
-    customer_name= StringField('Customer Name', [validate.length(min=1, max=250)])
+    customer_name= StringField('Customer Name', [validators.length(min=1, max=250)])
     order_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
     qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
     price = StringField('Food Price',[validators.length(min=1,max=15)])
