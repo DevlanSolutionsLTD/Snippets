@@ -161,6 +161,7 @@ def customerOrders():
 
 #Order Form Helper Class
 class OrderForm(Form):
+    customer_name= StringField('Customer Name', [validate.length(min=1, max=250)])
     order_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
     qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
     price = StringField('Food Price',[validators.length(min=1,max=15)])
@@ -176,12 +177,13 @@ def add_Customer_Order():
         qty = form.qty.data
         price = form.price.data
         status = form.status.data
+        customer_name = form.customer_name.data
 
         # Create Cursor
         cur = mysql.connection.cursor()
 
         # Execute
-        cur.execute("INSERT INTO customer_orders(order_food, qty, price, status) VALUES(%s, %s, %s, %s)", (order_food, qty, price, status))
+        cur.execute("INSERT INTO customer_orders(customer_name, order_food, qty, price, status) VALUES(%s, %s, %s, %s, %s)", (customer_name,order_food, qty, price, status))
 
         # Commit to DB
         mysql.connection.commit()
