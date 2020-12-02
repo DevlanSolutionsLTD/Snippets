@@ -161,7 +161,7 @@ def customerOrders():
 
 #Order Form Helper Class
 class OrderForm(Form):
-    oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
+    order_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
     qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
     price = StringField('Food Price',[validators.length(min=1,max=15)])
     status = StringField('Order Payment Status',[validators.length(min=1,max=15)])
@@ -172,7 +172,7 @@ class OrderForm(Form):
 def add_Customer_Order():
     form = OrderForm(request.form)
     if request.method == 'POST' and form.validate():
-        oder_food = form.oder_food.data
+        order_food = form.order_food.data
         qty = form.qty.data
         price = form.price.data
         status = form.status.data
