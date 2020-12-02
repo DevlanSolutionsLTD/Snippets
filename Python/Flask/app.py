@@ -159,12 +159,18 @@ def customerOrders():
     # Close connection
     cur.close()
 
-
+#Order Form Helper Class
+class OrderForm(Form):
+    oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
+    qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
+    price = StringField('Food Price',[validators.length(min=1,max=15)])
+    status = StringField('Order Payment Status',[validators.length(min=1,max=15)])
+    
 #Make Order
 @app.route('/make_order', methods=['GET', 'POST'])
 @is_logged_in
-def add_question():
-    form = ArticleForm(request.form)
+def add_Customer_Order():
+    form = OrderForm(request.form)
     if request.method == 'POST' and form.validate():
         oder_food = form.name.data
         qty = form.age.data
@@ -175,7 +181,7 @@ def add_question():
         cur = mysql.connection.cursor()
 
         # Execute
-        cur.execute("INSERT INTO customer_orders(order_food, qty, price, status) VALUES(%s, %s, %s, %s)", (order_food, qty, price, status)
+        cur.execute("INSERT INTO customer_orders(order_food, qty, price, status) VALUES(%s, %s, %s, %s)", (order_food, qty, price, status))
 
         # Commit to DB
         mysql.connection.commit()
@@ -189,12 +195,7 @@ def add_question():
 
     return render_template('maker_order.html', form=form)
 
-#Order Form
-class ArticleForm(Form):
-    oder_food= StringField('Food Ordered', [validators.Length(min=1, max=200)])
-    qty = StringField('Quantity Ordered', [validators.length(min=1, max=200)])
-    price = StringField('Food Price',[validators.length(min=1,max=15)])
-    status = StringField('Order Payment Status',[validators.length(min=1,max=15)])
+
 #Pay Order
 
 #Print Receipt
