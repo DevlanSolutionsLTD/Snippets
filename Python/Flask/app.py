@@ -146,7 +146,7 @@ def customerOrders():
     # Create cursor
     cur = mysql.connection.cursor()
 
-    # Get Filled Questionaires
+    # Get Customer Orders
     result = cur.execute("SELECT * FROM customer_orders ORDER BY created_at ASC")
 
     customerOrders = cur.fetchall()

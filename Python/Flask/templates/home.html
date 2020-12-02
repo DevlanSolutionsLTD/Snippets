@@ -21,15 +21,16 @@
           </tr>
         </thead>
         <tbody>
-          {% for customerOrders in customerOrders %}
+          {% for Responses in Responses %}
           <tr>
-            <th scope="row">{{customerOrders.id }}</th>
-            <td>{{customerOrders.order_food }}</td>
-            <td>{{customerOrders.qty }}</td>
-            <td>{{customerOrders.price }}</td>
-            <td>{{customerOrders.status }}</td>
-            <td>{{customerOrders.created_at }}</td>
-            <td><a href="pay_order/{{customerOrders.id}}"> Pay Order</a></td>
+            <th scope="row">{{Responses.id }}</th>
+            <th scope="col">{{Responses.customer_name}}</th>
+            <td>{{Responses.order_food }}</td>
+            <td>{{Responses.qty }}</td>
+            <td>{{Responses.price }}</td>
+            <td>{{Responses.status }}</td>
+            <td>{{Responses.created_at }}</td>
+            <td><a href="pay_order/{{Responses.id}}"> Pay Order</a></td>
           </tr>
           {% endfor %}
         </tbody>
