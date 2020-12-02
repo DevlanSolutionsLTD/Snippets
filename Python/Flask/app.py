@@ -198,8 +198,7 @@ def add_Customer_Order():
     return render_template('maker_order.html', form=form)
 
 
-#Pay Order
-
+#Pay Order -To Be Implemented Further
 
 #Print Receipt
 @app.route('/print_receipt/<string:id>/')
