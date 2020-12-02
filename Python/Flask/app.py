@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'martdevelopers_flask_starter'
+app.config['MYSQL_DB'] = 'ROS'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
@@ -129,7 +129,24 @@ def logout():
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
+# Dashboard
+@app.route('/dashboard')
+@is_logged_in
+def dashboard():
+    # Create cursor
+    cur = mysql.connection.cursor()
 
+    # Get Orders In Dashboard
+    # 
+    result = cur.execute("SELECT * FROM customer_orders")
+    Responses = cur.fetchall()
+    if result > 0:
+        return render_template('dashboard.html', Responses=Responses)      
+    else:
+        msg = 'No Contact Tracing Responses Found'
+        return render_template('dashboard.html', msg=msg)
+    # Close connection
+    cur.close()
 if __name__ == '__main__':
     app.secret_key = 'secret123'
     app.run(debug=True)
