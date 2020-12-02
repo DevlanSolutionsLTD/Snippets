@@ -114,12 +114,6 @@ def is_logged_in(f):
     return wrap
 
 
-# Home 
-@app.route('/home')
-@is_logged_in
-def dashboard():
-    return render_template('home.html')
-
 
 # Logout
 @app.route('/logout')
@@ -129,6 +123,24 @@ def logout():
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
+# Dashboard
+@app.route('/home')
+@is_logged_in
+def dashboard():
+    # Create cursor
+    cur = mysql.connection.cursor()
+
+    # Get questionaires
+    # Show recently tracing inforation of logged in user
+    result = cur.execute("SELECT * FROM questionaires WHERE name = %s", [session['username']])
+    Responses = cur.fetchall()
+    if result > 0:
+        return render_template('home.html', Responses=Responses)      
+    else:
+        msg = 'No Contact Tracing Responses Found'
+        return render_template('home.html', msg=msg)
+    # Close connection
+    cur.close()
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
