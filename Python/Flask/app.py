@@ -136,7 +136,7 @@ def dashboard():
     if result > 0:
         return render_template('home.html', Responses=Responses)      
     else:
-        msg = 'No Contact Tracing Responses Found'
+        msg = 'No Available Customer Orders Available'
         return render_template('home.html', msg=msg)
     # Close connection
     cur.close()
