@@ -143,10 +143,11 @@ def dashboard():
     if result > 0:
         return render_template('dashboard.html', Responses=Responses)      
     else:
-        msg = 'No Contact Tracing Responses Found'
+        msg = 'No Recent Orders Found'
         return render_template('dashboard.html', msg=msg)
     # Close connection
     cur.close()
+    
 if __name__ == '__main__':
     app.secret_key = 'secret123'
     app.run(debug=True)
