@@ -123,16 +123,15 @@ def logout():
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
 
-# Dashboard
+# Home
 @app.route('/home')
 @is_logged_in
 def dashboard():
     # Create cursor
     cur = mysql.connection.cursor()
 
-    # Get questionaires
-    # Show recently tracing inforation of logged in user
-    result = cur.execute("SELECT * FROM questionaires WHERE name = %s", [session['username']])
+    # Get Loaded Orders
+    result = cur.execute("SELECT * FROM customer_orders ORDER BY created_at ASC ")
     Responses = cur.fetchall()
     if result > 0:
         return render_template('home.html', Responses=Responses)      
