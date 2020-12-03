@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>Eddie Photography | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Main Stlesheet -->
+<link rel="stylesheet" href="assets/main_styles.css">
+<!-- Font Family - Raleway -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- Font Awesome Icons Css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("assets/images/cam3.jpg");
+        min-height: 100%;
+    }
+
+    .eddie_photography-bar .eddie_photography-button {
+        padding: 16px;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="eddie_photography-top">
+        <div class="eddie_photography-bar eddie_photography-white eddie_photography-card" id="myNavbar">
+            <a href="index.html" class="eddie_photography-bar-item eddie_photography-button eddie_photography-wide">Eddie Photgraphy</a>
+            <!-- Right-sided navbar links -->
+            <div class="eddie_photography-right eddie_photography-hide-small">
+                <a href="about.html" class="eddie_photography-bar-item eddie_photography-button">ABOUT</a>
+                <a href="team.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="work.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-th"></i> WORK</a>
+                <a href="pricing.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-usd"></i> PRICING</a>
+                <a href="contact.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="eddie_photography-bar-item eddie_photography-button eddie_photography-right eddie_photography-hide-large eddie_photography-hide-medium"
+                onclick="eddie_photography_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="eddie_photography-sidebar eddie_photography-bar-block eddie_photography-black eddie_photography-card eddie_photography-animate-left eddie_photography-hide-medium eddie_photography-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button eddie_photography-large eddie_photography-padding-16">Close
+            &times;</a>
+        <a href="about.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">ABOUT</a>
+        <a href="team.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">TEAM</a>
+        <a href="work.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">WORK</a>
+        <a href="pricing.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">PRICING</a>
+        <a href="contact.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 eddie_photography-display-container eddie_photography-grayscale-min" id="home">
+        <div class="eddie_photography-display-left eddie_photography-text-white" style="padding:48px">
+            <span class="eddie_photography-jumbo eddie_photography-hide-small">Eddie Photography</span><br>
+            <span class="eddie_photography-large">The Home Of Professional Photographers</span><br>
+            <span class="eddie_photography-large"><i class="fa fa-check"></i> Compel Your Audience,</span><br>
+            <span class="eddie_photography-large"><i class="fa fa-check"></i> Capture The Moment,</span><br>
+            <span class="eddie_photography-large"><i class="fa fa-check"></i> Light With Purpose.</span><br>
+        </div>
+        <div class="eddie_photography-display-bottomleft eddie_photography-text-grey eddie_photography-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official eddie_photography-hover-opacity"></i>
+            <i class="fa fa-instagram eddie_photography-hover-opacity"></i>
+            <i class="fa fa-snapchat eddie_photography-hover-opacity"></i>
+            <i class="fa fa-pinterest-p eddie_photography-hover-opacity"></i>
+            <i class="fa fa-twitter eddie_photography-hover-opacity"></i>
+            <i class="fa fa-linkedin eddie_photography-hover-opacity"></i>
+        </div>
+    </header>
+    <script src="assets/main_scripts.js">
+    </script>
+</body>
+</html>

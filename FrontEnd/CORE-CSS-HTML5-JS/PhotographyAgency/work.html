@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<title>Eddie Photography | Team</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Main Stlesheet -->
+<link rel="stylesheet" href="assets/main_styles.css">
+<!-- Font Family - Raleway -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- Font Awesome Icons Css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    .eddie_photography-bar .eddie_photography-button {
+        padding: 16px;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="eddie_photography-top">
+        <div class="eddie_photography-bar eddie_photography-white eddie_photography-card" id="myNavbar">
+            <a href="index.html" class="eddie_photography-bar-item eddie_photography-button eddie_photography-wide">Eddie Photgraphy</a>
+            <!-- Right-sided navbar links -->
+            <div class="eddie_photography-right eddie_photography-hide-small">
+                <a href="about.html" class="eddie_photography-bar-item eddie_photography-button">ABOUT</a>
+                <a href="team.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="work.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-th"></i> WORK</a>
+                <a href="pricing.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-usd"></i> PRICING</a>
+                <a href="contact.html" class="eddie_photography-bar-item eddie_photography-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="eddie_photography-bar-item eddie_photography-button eddie_photography-right eddie_photography-hide-large eddie_photography-hide-medium"
+                onclick="eddie_photography_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="eddie_photography-sidebar eddie_photography-bar-block eddie_photography-black eddie_photography-card eddie_photography-animate-left eddie_photography-hide-medium eddie_photography-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="eddie_photography_close()"
+            class="eddie_photography-bar-item eddie_photography-button eddie_photography-large eddie_photography-padding-16">Close
+            &times;</a>
+        <a href="about.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">ABOUT</a>
+        <a href="team.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">TEAM</a>
+        <a href="work.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">WORK</a>
+        <a href="pricing.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">PRICING</a>
+        <a href="contact.html" onclick="eddie_photography_close()" class="eddie_photography-bar-item eddie_photography-button">CONTACT</a>
+    </nav>
+    <!-- Work Section -->
+    <div class="eddie_photography-container" style="padding:128px 16px" id="work">
+        <h3 class="eddie_photography-center">OUR WORK</h3>
+        <p class="eddie_photography-center eddie_photography-large"><i>What we've done for people</i></p>
+
+        <div class="eddie_photography-row-padding" style="margin-top:64px">
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/penguin.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Penguin">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/Parrot.jpeg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Indian Parrot">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/Drone.webp" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Drone">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/TurnTable.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="TurnTable">
+            </div>
+        </div>
+
+        <div class="eddie_photography-row-padding eddie_photography-section">
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/cdj.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Pioneer CDJ">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/biker.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Biker">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/stunt.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Stunt">
+            </div>
+            <div class="eddie_photography-col l3 m6">
+                <img src="assets/images/photos/stunner.jpg" style="width:100%" onclick="onClick(this)"
+                    class="eddie_photography-hover-opacity" alt="Bike Stunt II">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="eddie_photography-modal eddie_photography-black" onclick="this.style.display='none'">
+        <span class="eddie_photography-button eddie_photography-xxlarge eddie_photography-black eddie_photography-padding-large eddie_photography-display-topright"
+            title="Close Modal Image">&times;</span>
+        <div class="eddie_photography-modal-content eddie_photography-animate-zoom eddie_photography-center eddie_photography-transparent eddie_photography-padding-64">
+            <img id="img01" class="eddie_photography-image">
+            <p id="caption" class="eddie_photography-opacity eddie_photography-large"></p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="eddie_photography-container eddie_photography-light-grey eddie_photography-padding-64">
+        <div class="eddie_photography-row-padding">
+            <div class="eddie_photography-col m6">
+                <h3>Our Skills.</h3>
+            </div>
+            <div class="eddie_photography-col m6">
+                <p class="eddie_photography-wide"><i class="fa fa-camera eddie_photography-margin-right"></i>Photography</p>
+                <div class="eddie_photography-grey">
+                    <div class="eddie_photography-container eddie_photography-dark-grey eddie_photography-center" style="width:100%">100%</div>
+                </div>
+                <p class="eddie_photography-wide"><i class="fa fa-paint-brush eddie_photography-margin-right"></i>Graphic Design</p>
+                <div class="eddie_photography-grey">
+                    <div class="eddie_photography-container eddie_photography-dark-grey eddie_photography-center" style="width:100%">100%</div>
+                </div>
+                <p class="eddie_photography-wide"><i class="fa fa-camera-retro eddie_photography-margin-right"></i>Events Management</p>
+                <div class="eddie_photography-grey">
+                    <div class="eddie_photography-container eddie_photography-dark-grey eddie_photography-center" style="width:95%">95%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="eddie_photography-center eddie_photography-black eddie_photography-padding-64">
+        <a href="#work" class="eddie_photography-button eddie_photography-light-grey"><i class="fa fa-arrow-up eddie_photography-margin-right"></i>To the top</a>
+        <div class="eddie_photography-xlarge eddie_photography-section">
+            <i class="fa fa-facebook-official eddie_photography-hover-opacity"></i>
+            <i class="fa fa-instagram eddie_photography-hover-opacity"></i>
+            <i class="fa fa-snapchat eddie_photography-hover-opacity"></i>
+            <i class="fa fa-pinterest-p eddie_photography-hover-opacity"></i>
+            <i class="fa fa-twitter eddie_photography-hover-opacity"></i>
+            <i class="fa fa-linkedin eddie_photography-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="" target="_blank" class="eddie_photography-hover-text-green">Me</a></p>
+    </footer>
+
+    <script src="assets/main_scripts.js">
+    </script>
+
+</body>
+
+</html>
